@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="VND-bm-bS7" customClass="AppScreanImages" customModule="TestAppStore" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VND-bm-bS7" id="Mae-Xc-eMZ">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2LN-8D-r3L">
+                        <rect key="frame" x="19" y="18" width="337.5" height="363.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="2LN-8D-r3L" secondAttribute="height" multiplier="337:363" id="vgc-0h-fxl"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2LN-8D-r3L" firstAttribute="top" secondItem="Mae-Xc-eMZ" secondAttribute="topMargin" constant="10" id="SmQ-yP-Nun"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="2LN-8D-r3L" secondAttribute="bottom" constant="10" id="scG-Ip-cJm"/>
+                    <constraint firstItem="2LN-8D-r3L" firstAttribute="centerX" secondItem="Mae-Xc-eMZ" secondAttribute="centerX" id="x4e-rS-HE3"/>
+                    <constraint firstItem="2LN-8D-r3L" firstAttribute="width" secondItem="Mae-Xc-eMZ" secondAttribute="width" multiplier="0.9" id="zSa-4D-Yvv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="-462.5" y="63"/>
+        </tableViewCell>
+    </objects>
+</document>
