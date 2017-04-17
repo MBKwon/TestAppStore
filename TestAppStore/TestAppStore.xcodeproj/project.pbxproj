@@ -25,6 +25,7 @@
 		F5D7B6611EA39D8800C31823 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5D7B6601EA39D8800C31823 /* Assets.xcassets */; };
 		F5D7B6641EA39D8900C31823 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5D7B6621EA39D8900C31823 /* LaunchScreen.storyboard */; };
 		F5D7B66D1EA3A16400C31823 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D7B66C1EA3A16400C31823 /* APIController.swift */; };
+		F5D7B6751EA4EEB200C31823 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D7B6741EA4EEB200C31823 /* Extentions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		F5D7B6631EA39D8900C31823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5D7B6651EA39D8900C31823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5D7B66C1EA3A16400C31823 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		F5D7B6741EA4EEB200C31823 /* Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				F5D7B6591EA39D8300C31823 /* AppDelegate.swift */,
 				F5D7B65B1EA39D8400C31823 /* ViewController.swift */,
 				F561F83F1EA4709600EB1DF6 /* AppDetailViewCotroller.swift */,
+				F5D7B6741EA4EEB200C31823 /* Extentions.swift */,
 				F5D7B65D1EA39D8700C31823 /* Main.storyboard */,
 				F5D7B6601EA39D8800C31823 /* Assets.xcassets */,
 				F5D7B6621EA39D8900C31823 /* LaunchScreen.storyboard */,
@@ -278,6 +281,7 @@
 				F5D7B66D1EA3A16400C31823 /* APIController.swift in Sources */,
 				F561F83C1EA464B500EB1DF6 /* AppListCell.swift in Sources */,
 				F5D7B65C1EA39D8400C31823 /* ViewController.swift in Sources */,
+				F5D7B6751EA4EEB200C31823 /* Extentions.swift in Sources */,
 				F561F8481EA4880400EB1DF6 /* AppScreanImages.swift in Sources */,
 				F561F8391EA44C4800EB1DF6 /* AppListModel.swift in Sources */,
 				F561F8421EA4735E00EB1DF6 /* AppDetailModel.swift in Sources */,

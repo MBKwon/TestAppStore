@@ -10,13 +10,11 @@ import Foundation
 import UIKit
 
 
-var CELL_ID_APP_DETAIL_TITLE        = "AppDetailTitle"
-var CELL_ID_APP_DETAIL_IMAGES       = "AppScreanImages"
-var CELL_ID_APP_DETAIL_DESCRIPTION  = "AppDetailDescription"
-
-
 class AppDetailViewCotroller: UIViewController {
     
+    let CELL_ID_APP_DETAIL_TITLE        = "AppDetailTitle"
+    let CELL_ID_APP_DETAIL_IMAGES       = "AppScreanImages"
+    let CELL_ID_APP_DETAIL_DESCRIPTION  = "AppDetailDescription"
     
     @IBOutlet weak var tableView: UITableView!
     var appDetailModel: AppDetailModel?
@@ -29,6 +27,8 @@ class AppDetailViewCotroller: UIViewController {
         set (newAppId) {
             APIController.sharedInstance.getAppInfo(appId: newAppId, callback: { detailModel in
                 self.appDetailModel = detailModel
+                
+                self.setNavigation(title: self.appDetailModel?.appTitle)
                 self.tableView.reloadData()
             })
         }
@@ -40,9 +40,10 @@ class AppDetailViewCotroller: UIViewController {
         
         tableView.estimatedRowHeight = 102.0
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.register(UINib(nibName: CELL_ID_APP_DETAIL_TITLE, bundle: nil), forCellReuseIdentifier: CELL_ID_APP_DETAIL_TITLE)
-        tableView.register(UINib(nibName: CELL_ID_APP_DETAIL_IMAGES, bundle: nil), forCellReuseIdentifier: CELL_ID_APP_DETAIL_IMAGES)
-        tableView.register(UINib(nibName: CELL_ID_APP_DETAIL_DESCRIPTION, bundle: nil), forCellReuseIdentifier: CELL_ID_APP_DETAIL_DESCRIPTION)
+        
+        tableView.registerNibName(identifer: CELL_ID_APP_DETAIL_TITLE)
+        tableView.registerNibName(identifer: CELL_ID_APP_DETAIL_IMAGES)
+        tableView.registerNibName(identifer: CELL_ID_APP_DETAIL_DESCRIPTION)
     }
 }
 

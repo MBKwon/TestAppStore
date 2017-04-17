@@ -9,10 +9,10 @@
 import UIKit
 
 
-var CELL_ID_APP_LIST        = "AppListCell"
-var SEGUE_ID_GO_TO_DETAIL   = "goToAppDetail"
-
 class ViewController: UIViewController {
+    
+    let CELL_ID_APP_LIST        = "AppListCell"
+    let SEGUE_ID_GO_TO_DETAIL   = "goToAppDetail"
     
     var selectedIndex: Int = -1
     var listModel: [AppListModel]?
@@ -23,9 +23,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        self.setNavigation(title: "Top 50")
+        
         tableView.estimatedRowHeight = 60.0
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.register(UINib(nibName: CELL_ID_APP_LIST, bundle: nil), forCellReuseIdentifier: CELL_ID_APP_LIST)
+        tableView.registerNibName(identifer: CELL_ID_APP_LIST)
         
         APIController.sharedInstance.getAppListFromAppStore(callback: { listModel in
             self.listModel = listModel

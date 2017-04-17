@@ -11,6 +11,7 @@ import UIKit
 
 
 class AppDetailDescription: UITableViewCell {
+    
     @IBOutlet weak var descriptionLabel: UILabel!
     
     func setInfo(itemInfo: AppDetailModel?) {

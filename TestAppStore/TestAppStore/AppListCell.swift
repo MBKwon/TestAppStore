@@ -12,6 +12,7 @@ import SDWebImage
 
 
 class AppListCell: UITableViewCell {
+    
     @IBOutlet weak var numLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var appImageView: UIImageView!
@@ -24,10 +25,10 @@ class AppListCell: UITableViewCell {
         }
         
         titleLabel.text = appInfoModel.title
-        
         if let iconUrl = appInfoModel.iconUrl {
             appImageView.sd_setImage(with: URL(string: iconUrl))
         }
+        
     }
 }
 

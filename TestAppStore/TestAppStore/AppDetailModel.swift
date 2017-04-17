@@ -29,7 +29,7 @@ struct AppDetailModel : Mappable {
     var artworkUrl100: String?
     var screenshotUrls: [String]?
     var averageUserRatingForCurrentVersion: Double?
-    var trackCensoredName: String?
+    var appTitle: String?
     var userRatingCountForCurrentVersion: Int?
     var description: String?
     
@@ -41,7 +41,7 @@ struct AppDetailModel : Mappable {
         artworkUrl100                       <- map["artworkUrl100"]
         screenshotUrls                      <- map["screenshotUrls"]
         averageUserRatingForCurrentVersion  <- map["averageUserRatingForCurrentVersion"]
-        trackCensoredName                   <- map["trackCensoredName"]
+        appTitle                            <- map["trackCensoredName"]
         userRatingCountForCurrentVersion    <- map["userRatingCountForCurrentVersion"]
         description                         <- map["description"]
     }

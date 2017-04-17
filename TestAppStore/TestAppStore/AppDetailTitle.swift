@@ -13,6 +13,7 @@ import Cosmos
 
 
 class AppDetailTitle: UITableViewCell {
+    
     @IBOutlet weak var appImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var starRating: CosmosView!
@@ -27,7 +28,7 @@ class AppDetailTitle: UITableViewCell {
             appImageView.sd_setImage(with: URL(string: iconUrl))
         }
         
-        titleLabel.text = appInfoModel.trackCensoredName
+        titleLabel.text = appInfoModel.appTitle
         starRating.rating = appInfoModel.averageUserRatingForCurrentVersion ?? 0.0
         starRating.text = "(" + String(appInfoModel.userRatingCountForCurrentVersion ?? 0) + ")"
         starRating.alpha = 1.0

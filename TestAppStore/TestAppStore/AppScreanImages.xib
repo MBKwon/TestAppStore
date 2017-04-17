@@ -25,13 +25,13 @@
                         <rect key="frame" x="19" y="18" width="337.5" height="363.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="2LN-8D-r3L" secondAttribute="height" multiplier="337:363" id="vgc-0h-fxl"/>
+                            <constraint firstAttribute="width" secondItem="2LN-8D-r3L" secondAttribute="height" multiplier="337:363" id="8kr-SQ-V6f"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="2LN-8D-r3L" firstAttribute="top" secondItem="Mae-Xc-eMZ" secondAttribute="topMargin" constant="10" id="SmQ-yP-Nun"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="2LN-8D-r3L" secondAttribute="bottom" constant="10" id="scG-Ip-cJm"/>
+                    <constraint firstItem="2LN-8D-r3L" firstAttribute="top" secondItem="Mae-Xc-eMZ" secondAttribute="topMargin" priority="750" constant="10" id="UJn-2W-LqC"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="2LN-8D-r3L" secondAttribute="bottom" priority="750" constant="10" id="bdU-OV-DcU"/>
                     <constraint firstItem="2LN-8D-r3L" firstAttribute="centerX" secondItem="Mae-Xc-eMZ" secondAttribute="centerX" id="x4e-rS-HE3"/>
                     <constraint firstItem="2LN-8D-r3L" firstAttribute="width" secondItem="Mae-Xc-eMZ" secondAttribute="width" multiplier="0.9" id="zSa-4D-Yvv"/>
                 </constraints>
