@@ -16,7 +16,7 @@ class AppScreanImages: UITableViewCell {
     var imageSlide: ImageSlideshow?
     var superViewController: UIViewController?
     
-    func setInfo(itemInfo: AppDetailModel?) {
+    func setInfo(_ itemInfo: AppDetailModel?) {
         
         guard let imageArray = itemInfo?.screenshotUrls?.map({ (imageUrl) -> AlamofireSource in
             return AlamofireSource(urlString: imageUrl)!

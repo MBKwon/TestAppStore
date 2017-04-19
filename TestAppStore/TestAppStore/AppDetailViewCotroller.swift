@@ -21,14 +21,14 @@ class AppDetailViewCotroller: UIViewController {
     
     var appId: String {
         get {
-            return self.appId
+            return String(describing: appDetailModel?.appIdentifier)
         }
         
         set (newAppId) {
-            APIController.sharedInstance.getAppInfo(appId: newAppId, callback: { detailModel in
+            APIController.sharedInstance.getAppInfo(newAppId, callback: { detailModel in
                 self.appDetailModel = detailModel
                 
-                self.setNavigation(title: self.appDetailModel?.appTitle)
+                self.setNavigationTitle(self.appDetailModel?.appTitle)
                 self.tableView.reloadData()
             })
         }
@@ -41,9 +41,9 @@ class AppDetailViewCotroller: UIViewController {
         tableView.estimatedRowHeight = 102.0
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        tableView.registerNibName(identifer: CELL_ID_APP_DETAIL_TITLE)
-        tableView.registerNibName(identifer: CELL_ID_APP_DETAIL_IMAGES)
-        tableView.registerNibName(identifer: CELL_ID_APP_DETAIL_DESCRIPTION)
+        tableView.registerNibName(CELL_ID_APP_DETAIL_TITLE)
+        tableView.registerNibName(CELL_ID_APP_DETAIL_IMAGES)
+        tableView.registerNibName(CELL_ID_APP_DETAIL_DESCRIPTION)
     }
 }
 
@@ -58,20 +58,20 @@ extension AppDetailViewCotroller: UITableViewDataSource {
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID_APP_DETAIL_TITLE) as! AppDetailTitle
-            cell.setInfo(itemInfo: appDetailModel)
+            cell.setInfo(appDetailModel)
             
             return cell
             
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID_APP_DETAIL_IMAGES) as! AppScreanImages
             cell.superViewController = self
-            cell.setInfo(itemInfo: appDetailModel)
+            cell.setInfo(appDetailModel)
             
             return cell
             
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID_APP_DETAIL_DESCRIPTION) as! AppDetailDescription
-            cell.setInfo(itemInfo: appDetailModel)
+            cell.setInfo(appDetailModel)
             
             return cell
             

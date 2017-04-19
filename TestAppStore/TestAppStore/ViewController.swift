@@ -16,25 +16,26 @@ class ViewController: UIViewController {
     
     var selectedIndex: Int = -1
     var listModel: [AppListModel]?
+    
     @IBOutlet weak var tableView: UITableView!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.setNavigation(title: "Top 50")
+        self.setNavigationTitle("Top 50")
         
         tableView.estimatedRowHeight = 60.0
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.registerNibName(identifer: CELL_ID_APP_LIST)
+        tableView.registerNibName(CELL_ID_APP_LIST)
         
-        APIController.sharedInstance.getAppListFromAppStore(callback: { listModel in
+        APIController.sharedInstance.getAppListFromAppStore(){ listModel in
             self.listModel = listModel
             self.tableView.reloadData()
-        })
+        }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -58,7 +59,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID_APP_LIST) as! AppListCell
-        cell.setInfo(itemInfo: listModel?[indexPath.row], rank: indexPath.row+1)
+        cell.setInfo(listModel?[indexPath.row], rank: indexPath.row+1)
         
         return cell
     }

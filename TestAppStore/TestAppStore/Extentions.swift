@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 
 extension UIViewController {
-    func setNavigation(title: String?) {
+    func setNavigationTitle(_ title: String?) {
         self.navigationController?.navigationBar.topItem?.title = title
     }
 }
 
 extension UITableView {
-    func registerNibName(identifer: String) {
+    func registerNibName(_ identifer: String) {
         self.register(UINib(nibName: identifer, bundle: nil), forCellReuseIdentifier: identifer)
     }
 }

@@ -14,7 +14,7 @@ class AppDetailDescription: UITableViewCell {
     
     @IBOutlet weak var descriptionLabel: UILabel!
     
-    func setInfo(itemInfo: AppDetailModel?) {
+    func setInfo(_ itemInfo: AppDetailModel?) {
         descriptionLabel.text = itemInfo?.description
     }
 }

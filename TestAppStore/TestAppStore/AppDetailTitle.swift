@@ -18,7 +18,7 @@ class AppDetailTitle: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var starRating: CosmosView!
     
-    func setInfo(itemInfo: AppDetailModel?) {
+    func setInfo(_ itemInfo: AppDetailModel?) {
         
         guard let appInfoModel = itemInfo else  {
             return
@@ -30,7 +30,7 @@ class AppDetailTitle: UITableViewCell {
         
         titleLabel.text = appInfoModel.appTitle
         starRating.rating = appInfoModel.averageUserRatingForCurrentVersion ?? 0.0
-        starRating.text = "(" + String(appInfoModel.userRatingCountForCurrentVersion ?? 0) + ")"
+        starRating.text = "(" + "\(appInfoModel.userRatingCountForCurrentVersion ?? 0)" + ")"
         starRating.alpha = 1.0
     }
 }

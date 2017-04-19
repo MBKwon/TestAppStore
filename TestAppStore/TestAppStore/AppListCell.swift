@@ -17,8 +17,8 @@ class AppListCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var appImageView: UIImageView!
     
-    func setInfo(itemInfo: AppListModel?, rank: Int) {
-        numLabel.text = String(rank)
+    func setInfo(_ itemInfo: AppListModel?, rank: Int) {
+        numLabel.text = "\(rank)"
         
         guard let appInfoModel = itemInfo else  {
             return

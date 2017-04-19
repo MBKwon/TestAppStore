@@ -20,13 +20,13 @@ class APIController {
     
     
     //MARK: Shared Instance
-    private init() { }
+    fileprivate init() { }
     static let sharedInstance: APIController = APIController()
 }
 
 extension APIController {
     
-    func getAppListFromAppStore(callback: @escaping ([AppListModel]?)->()) {
+    func getAppListFromAppStore(_ callback: @escaping ([AppListModel]?)->()) {
         Alamofire.request(APP_LIST_URL).responseArray(keyPath: "feed.entry") { (response: DataResponse<[AppListModel]>) in
             
             guard let listModel = response.result.value else {
@@ -40,7 +40,7 @@ extension APIController {
     }
     
     
-    func getAppInfo(appId: String, callback: @escaping (AppDetailModel?)->()) {
+    func getAppInfo(_ appId: String, callback: @escaping (AppDetailModel?)->()) {
         let appInfoUrl: String = APP_INFO_TEMPALTE.replacingOccurrences(of: "{id}", with: appId)
         
         Alamofire.request(appInfoUrl).responseObject { (response: DataResponse<AppDetailResults>) in

@@ -26,6 +26,7 @@ struct AppDetailResults : Mappable {
 
 struct AppDetailModel : Mappable {
     
+    var appIdentifier: UInt64?
     var artworkUrl100: String?
     var screenshotUrls: [String]?
     var averageUserRatingForCurrentVersion: Double?
@@ -38,6 +39,7 @@ struct AppDetailModel : Mappable {
     }
     
     mutating func mapping(map: Map) {
+        appIdentifier                       <- map["trackId"]
         artworkUrl100                       <- map["artworkUrl100"]
         screenshotUrls                      <- map["screenshotUrls"]
         averageUserRatingForCurrentVersion  <- map["averageUserRatingForCurrentVersion"]
