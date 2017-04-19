@@ -30,9 +30,9 @@ class ViewController: UIViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.registerNibName(CELL_ID_APP_LIST)
         
-        APIController.sharedInstance.getAppListFromAppStore(){ listModel in
-            self.listModel = listModel
-            self.tableView.reloadData()
+        APIController.sharedInstance.getAppListFromAppStore(){ [weak self] listModel in
+            self?.listModel = listModel
+            self?.tableView.reloadData()
         }
     }
     

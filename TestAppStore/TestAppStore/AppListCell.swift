@@ -26,7 +26,11 @@ class AppListCell: UITableViewCell {
         
         titleLabel.text = appInfoModel.title
         if let iconUrl = appInfoModel.iconUrl {
-            appImageView.sd_setImage(with: URL(string: iconUrl))
+            appImageView.sd_setImage(with: URL(string: iconUrl), completed: { [unowned self] (iconImage, error, cacheType, url) in
+                if iconUrl == url?.absoluteString {
+                    self.appImageView.image = iconImage;
+                }
+            });
         }
         
     }

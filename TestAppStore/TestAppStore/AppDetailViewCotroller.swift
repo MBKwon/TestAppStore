@@ -25,11 +25,11 @@ class AppDetailViewCotroller: UIViewController {
         }
         
         set (newAppId) {
-            APIController.sharedInstance.getAppInfo(newAppId, callback: { detailModel in
-                self.appDetailModel = detailModel
+            APIController.sharedInstance.getAppInfo(newAppId, callback: { [weak self] detailModel in
+                self?.appDetailModel = detailModel
                 
-                self.setNavigationTitle(self.appDetailModel?.appTitle)
-                self.tableView.reloadData()
+                self?.setNavigationTitle(self?.appDetailModel?.appTitle)
+                self?.tableView.reloadData()
             })
         }
     }
