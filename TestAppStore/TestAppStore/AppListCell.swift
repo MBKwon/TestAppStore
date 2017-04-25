@@ -17,6 +17,8 @@ class AppListCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var appImageView: UIImageView!
     
+    var iconUrl: String = ""
+    
     func setInfo(_ itemInfo: AppListModel?, rank: Int) {
         numLabel.text = "\(rank)"
         
@@ -26,9 +28,14 @@ class AppListCell: UITableViewCell {
         
         titleLabel.text = appInfoModel.title
         if let iconUrl = appInfoModel.iconUrl {
+            
+            self.iconUrl = iconUrl
             appImageView.sd_setImage(with: URL(string: iconUrl), completed: { [unowned self] (iconImage, error, cacheType, url) in
-                if iconUrl == url?.absoluteString {
-                    self.appImageView.image = iconImage;
+                if self.iconUrl == url?.absoluteString {
+                    self.appImageView.image = iconImage
+                    
+                } else {
+                    self.appImageView.image = nil
                 }
             });
         }
