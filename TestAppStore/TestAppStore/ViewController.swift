@@ -59,6 +59,7 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID_APP_LIST) as! AppListCell
+        cell.resetInfo()
         cell.setInfo(listModel?[indexPath.row], rank: indexPath.row+1)
         
         return cell

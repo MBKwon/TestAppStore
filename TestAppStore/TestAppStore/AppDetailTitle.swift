@@ -14,9 +14,9 @@ import Cosmos
 
 class AppDetailTitle: UITableViewCell {
     
-    @IBOutlet weak var appImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var starRating: CosmosView!
+    @IBOutlet weak var appImageView: UIImageView!
     
     func setInfo(_ itemInfo: AppDetailModel?) {
         

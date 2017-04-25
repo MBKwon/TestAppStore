@@ -19,6 +19,12 @@ class AppListCell: UITableViewCell {
     
     var iconUrl: String = ""
     
+    func resetInfo() {
+        numLabel.text = ""
+        titleLabel.text = ""
+        appImageView.image = nil
+    }
+    
     func setInfo(_ itemInfo: AppListModel?, rank: Int) {
         numLabel.text = "\(rank)"
         
@@ -34,8 +40,6 @@ class AppListCell: UITableViewCell {
                 if self.iconUrl == url?.absoluteString {
                     self.appImageView.image = iconImage
                     
-                } else {
-                    self.appImageView.image = nil
                 }
             })
         }
