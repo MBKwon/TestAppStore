@@ -37,7 +37,7 @@ class AppListCell: UITableViewCell {
                 } else {
                     self.appImageView.image = nil
                 }
-            });
+            })
         }
         
     }
